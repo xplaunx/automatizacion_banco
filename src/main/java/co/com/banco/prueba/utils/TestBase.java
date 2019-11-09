@@ -26,7 +26,7 @@ public class TestBase {
 		
 		driver.manage().window().maximize();
 		driver.get("http://dbankdemo.com/login");
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
 		
 		return driver;
 		
@@ -34,11 +34,11 @@ public class TestBase {
 	
 	/* Metodo de espera implicita de 5 segundos */
 	public static void esperaImplicita() {
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
 	}
 	
 	public static void closeDriver() {
 		driver.close();
-	}
+	} 
 	
-} // end BrowserFactory
+} // end BrowserFactory 
