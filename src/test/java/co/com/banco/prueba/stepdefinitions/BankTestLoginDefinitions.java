@@ -2,6 +2,7 @@ package co.com.banco.prueba.stepdefinitions;
 
 import org.openqa.selenium.WebDriver;
 
+import co.com.banco.prueba.pages.HomePage;
 import co.com.banco.prueba.pages.LoginPage;
 import co.com.banco.prueba.utils.TestBase;
 import cucumber.api.java.en.Given;
@@ -35,3 +36,5 @@ public class BankTestLoginDefinitions {
 	
 	
 } //end class
+
+
