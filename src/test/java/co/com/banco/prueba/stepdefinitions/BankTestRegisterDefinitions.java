@@ -31,17 +31,17 @@ public class BankTestRegisterDefinitions extends TestBase {
 	    		"Saldarriaga Ruiz",
 	    		"M",
 	    		"01/07/1995",
-	    		"251-85-0006",
-	    		"sebasqvision06@qvision.com.co", 
+	    		"251-85-0012",
+	    		"sebasqvision12@qvision.com.co", 
 	    		"Sebas123",
 	    		"Dgnl 22 num 3",
 	    		"QVision",
 	    		"CO",
 	    		"055412",
 	    		"Medellin",
-	    		"543322-0006",
-	    		"242352-0006",
-	    		"352233-0006");
+	    		"543322-0012",
+	    		"242352-0012",
+	    		"352233-0012");
 	}
 
 	@Then("^the user is created successfully$")
