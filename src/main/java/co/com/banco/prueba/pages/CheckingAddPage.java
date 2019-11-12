@@ -40,8 +40,14 @@ public class CheckingAddPage extends TestBase {
 	WebElement buttonSubmit;
 	
 	
-	public void entryDataNewChecking(String ownership, String nameAccount, String balance) {
-		accountTypeStandard.click();
+	public void entryDataNewChecking(String accountType, String ownership, String nameAccount, String balance) {
+		
+		if(accountType.equalsIgnoreCase("Standard")) {
+			accountTypeStandard.click();
+		} else if(accountType.equalsIgnoreCase("Interest")) {
+			accountTypeInterest.click();
+		}
+		
 		
 		if(ownership.equalsIgnoreCase("Individual")) {
 			if(!ownershipIndividual.isSelected()) {

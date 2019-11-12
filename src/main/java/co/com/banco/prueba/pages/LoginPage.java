@@ -34,6 +34,9 @@ public class LoginPage extends TestBase{
     @FindBy(id = "submit")
     WebElement buttonSubmit;
     
+    @FindBy(xpath="//*[@class='sufee-alert alert with-close alert-danger alert-dismissible fade show']")
+    WebElement messageError;
+    
     
     
     /* Metodo para ingresar al formulario de registro de usuario */
@@ -54,6 +57,11 @@ public class LoginPage extends TestBase{
     	String linkHomePage = driver.getCurrentUrl(); 
     	Assert.assertEquals("http://dbankdemo.com/home", linkHomePage);
     }
+    
+    public void verifyStatusLogin() {
+    	Assert.assertTrue(messageError.getText().contains("Invalid credentials"));
+    }
+    
     
     
     

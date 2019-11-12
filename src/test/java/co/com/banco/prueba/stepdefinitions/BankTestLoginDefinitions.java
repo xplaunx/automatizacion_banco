@@ -33,6 +33,24 @@ public class BankTestLoginDefinitions {
 	    TestBase.closeDriver();
 	}
 	
+	@When("^entry user valid and password invalid$")
+	public void entry_user_valid_and_password_invalid() throws Exception {
+		login = new LoginPage(driver);
+		login.enterHomePage("sebasqvision@qvision.com.co", "xxx234");
+	}
+
+	@When("^username and password is empty$")
+	public void username_and_password_is_empty() throws Exception {
+		login = new LoginPage(driver);
+		login.enterHomePage("", "");
+	}
+	
+	
+	@Then("^show a message of error$")
+	public void show_a_message_of_error() throws Exception {
+		login.verifyStatusLogin();
+		TestBase.closeDriver();
+	}
 	
 	
 } //end class

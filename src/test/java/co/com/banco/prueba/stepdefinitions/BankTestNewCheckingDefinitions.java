@@ -20,30 +20,35 @@ public class BankTestNewCheckingDefinitions {
 	CheckingViewPage checkingView;
 	
 	
-	@Given("^I want create a new checking standard$")
+	 
+	 
+
+	@Given("^I am in the new checking page$")
 	public void i_want_create_a_new_checking_standard() throws Exception {
 		driver = TestBase.startBrowser("chrome");
 		login = new LoginPage(driver);
-		login.enterHomePage("sebasqvision@qvision.com.co", "Sebas123");
+		login.enterHomePage("sebasqvision1@qvision.com.co", "Sebas123");
 		home = new HomePage(driver);
 		home.entryNewChecking();
 		TestBase.esperaImplicita();
 	}
 
 
-	@When("^I entry \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
-	public void i_entry(String arg1, String arg2, String arg3) throws Exception {
+    @When("^i entry \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
+	public void i_entry(String arg1, String arg2, String arg3, String arg4) throws Exception {
 	    checkingAdd = new CheckingAddPage(driver);
-	    checkingAdd.entryDataNewChecking(arg1, arg2, arg3);
+	    checkingAdd.entryDataNewChecking(arg1, arg2, arg3, arg4);
 	}
 
-	@Then("^the system show a page view-checking$")
-	public void the_system_show_a_message_with_$_of_the_new_checking() throws Exception {
+	@Then("^the system show a page view-checking \"([^\"]*)\" \"([^\"]*)\"$")
+	public void the_system_show_a_message_with_$_of_the_new_checking(String arg1, String arg2) throws Exception {
 	    checkingView = new CheckingViewPage(driver);
 	    TestBase.esperaImplicita();
-	    checkingView.checkStatusChecking();
+	    checkingView.checkAccount(arg1, arg2);
 	    TestBase.closeDriver();
 	}
+	 
+	 
 
 	
 	
