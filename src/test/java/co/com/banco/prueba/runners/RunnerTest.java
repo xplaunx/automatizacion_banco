@@ -8,7 +8,8 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 		features="src/test/resources/features",
-		glue="co.com.banco.prueba.stepdefinitions"
+		glue="co.com.banco.prueba.stepdefinitions",
+	    tags = {"@Login,@NewChecking"}
 		)
 
 
